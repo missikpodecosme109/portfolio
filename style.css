@@ -311,7 +311,7 @@ nav ul{
     width:320px;
     height:320px;
     object-fit:cover;
-    object-position:center top;
+    object-position:50% 20%;
     border-radius:50%;
     border:5px solid #38bdf8;
     box-shadow:0 0 30px rgba(56,189,248,0.4);
@@ -337,6 +337,31 @@ nav ul{
 .buttons a:hover{
     transform:translateY(-5px);
     box-shadow:0 10px 20px rgba(56,189,248,0.3);
+}
+.contact-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:30px;
+}
+
+
+.contact-links a{
+    background:#111827;
+    color:#38bdf8;
+    padding:15px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    border:1px solid #38bdf8;
+    transition:0.3s;
+}
+
+
+.contact-links a:hover{
+    background:#38bdf8;
+    color:#020617;
+    transform:translateY(-5px);
 }
 
 }
