@@ -31,7 +31,7 @@
     <!-- Polices -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -73,6 +73,7 @@
             <li><a href="#competences">Compétences</a></li>
             <li><a href="#experiences">Expériences</a></li>
             <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#hackathons">Hackathons</a></li>
             <li><a href="#projets">Projets</a></li>
             <li><a href="#parcours">Parcours</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -102,6 +103,7 @@
         <a href="#competences">Compétences</a>
         <a href="#experiences">Expériences</a>
         <a href="#certifications">Certifications</a>
+        <a href="#hackathons">Hackathons</a>
         <a href="#projets">Projets</a>
         <a href="#parcours">Parcours</a>
         <a href="#contact">Contact</a>
@@ -127,19 +129,24 @@
             </p>
 
             <div class="hero-actions">
-                <a href="#parcours" class="btn btn-secondary">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88"></polygon></svg>
-                    Découvrir mon parcours
-                </a>
-                <a href="#projets" class="btn btn-secondary">
+                <a href="#projets" class="btn btn-primary">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 2,7 12,12 22,7 12,2"></polygon><polyline points="2,17 12,22 22,17"></polyline><polyline points="2,12 12,17 22,12"></polyline></svg>
                     Voir mes projets
                 </a>
-                <a data-link="cv" download class="btn btn-primary">
+                <a href="#parcours" class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88"></polygon></svg>
+                    Mon parcours
+                </a>
+                <a data-link="cv" download class="btn btn-secondary">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7,10 12,15 17,10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                     Télécharger mon CV
                 </a>
             </div>
+
+            <a data-link="cv-view" target="_blank" rel="noopener" class="text-link hero-cv-alt">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                Voir mon CV en ligne
+            </a>
 
             <div class="hero-socials">
                 <a data-link="github" target="_blank" rel="noopener" class="icon-btn" aria-label="Profil GitHub">
@@ -158,12 +165,14 @@
         </div>
 
         <div class="hero-visual">
-            <div class="hero-photo-frame">
-                <div class="hero-photo-glow" aria-hidden="true"></div>
-                <div class="hero-photo-ring">
-                    <img src="assets/photo.jpeg" alt="Portrait de MISSIKPODE Mahugnon Cosme" width="300" height="300">
+            <div class="hero-photo-wrap">
+                <div class="hero-photo-ambient" aria-hidden="true"></div>
+                <div class="hero-photo-dots" aria-hidden="true"></div>
+                <div class="hero-photo-frame">
+                    <img src="assets/photo.jpeg" alt="Portrait de MISSIKPODE Mahugnon Cosme" width="320" height="320">
                 </div>
-                <span class="hero-badge">🎓 GEI-IT · INSTI-Lokossa</span>
+                <span class="hero-chip hero-chip--education">🎓 GEI-IT · INSTI-Lokossa</span>
+                <span class="hero-chip hero-chip--focus">Réseaux • Cybersécurité</span>
             </div>
         </div>
     </div>
@@ -193,7 +202,7 @@
                 </p>
                 <p>
                     J'apprends principalement par la pratique : monter et configurer des postes,
-                    manipuler des outils comme Linux et Kali Linux, écrire du code, et reproduire
+                    manipuler des systèmes comme Linux et Kali Linux, écrire du code, et reproduire
                     des scénarios concrets pour mieux comprendre la théorie vue en cours. Cette approche
                     m'a permis de découvrir progressivement la cybersécurité, un domaine qui m'intéresse
                     de plus en plus et que je continue d'explorer.
@@ -251,7 +260,7 @@
                     <span class="skill-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
                     </span>
-                    <h3>Réseaux &amp; Systèmes</h3>
+                    <h3>Réseaux &amp; Télécommunications</h3>
                 </div>
                 <p class="skill-note">Les fondamentaux que j'applique et approfondis en pratique.</p>
                 <div class="skill-tags">
@@ -259,9 +268,23 @@
                     <span class="skill-tag">Modèle OSI</span>
                     <span class="skill-tag">Réseaux informatiques</span>
                     <span class="skill-tag">Cisco</span>
-                    <span class="skill-tag">Administration réseau</span>
+                </div>
+            </div>
+
+            <div class="skill-category" data-reveal>
+                <div class="skill-category-head">
+                    <span class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                    </span>
+                    <h3>Systèmes</h3>
+                </div>
+                <p class="skill-note">Installation, configuration et administration au quotidien.</p>
+                <div class="skill-tags">
                     <span class="skill-tag">Linux</span>
                     <span class="skill-tag">Kali Linux</span>
+                    <span class="skill-tag">Ubuntu</span>
+                    <span class="skill-tag">Windows</span>
+                    <span class="skill-tag">Administration système</span>
                 </div>
             </div>
 
@@ -270,13 +293,14 @@
                     <span class="skill-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16,18 22,12 16,6"></polyline><polyline points="8,6 2,12 8,18"></polyline></svg>
                     </span>
-                    <h3>Développement Web</h3>
+                    <h3>Développement</h3>
                 </div>
-                <p class="skill-note">Les technologies que j'utilise pour construire mes projets web.</p>
+                <p class="skill-note">Les langages et technologies que j'utilise pour construire mes projets.</p>
                 <div class="skill-tags">
                     <span class="skill-tag">HTML</span>
                     <span class="skill-tag">CSS</span>
                     <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Python</span>
                     <span class="skill-tag">PHP</span>
                     <span class="skill-tag">MySQL</span>
                 </div>
@@ -305,9 +329,8 @@
                     </span>
                     <h3>Cybersécurité</h3>
                 </div>
-                <p class="skill-note">Un domaine en développement : je construis progressivement mes connaissances, notamment via Kali Linux et mes stages en environnement informatique professionnel.</p>
+                <p class="skill-note">Une spécialisation en développement : je construis progressivement mes connaissances, notamment via Kali Linux et mes stages en environnement informatique professionnel. Je ne me présente pas comme expert dans ce domaine — c'est un axe que je choisis d'approfondir.</p>
                 <div class="skill-tags">
-                    <span class="skill-tag">Kali Linux</span>
                     <span class="skill-tag">Sensibilisation sécurité réseau</span>
                     <span class="skill-tag">Veille cybersécurité</span>
                 </div>
@@ -356,6 +379,19 @@
                     </p>
                 </div>
             </div>
+
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-badge">Expérience informatique</span>
+                    <h3>SUBLIME WORLD</h3>
+                    <div class="timeline-org">Expérience informatique</div>
+                    <p>
+                        Expérience professionnelle dans le domaine informatique, contribuant au
+                        développement de mes compétences techniques dans un environnement de travail structuré.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -377,6 +413,30 @@
                 <h3>English for IT 1</h3>
                 <div class="cert-org">Cisco Networking Academy</div>
                 <p>Formation axée sur l'anglais technique appliqué à l'informatique et aux télécommunications.</p>
+                <!-- TODO : ajouter ici un lien "Voir l'attestation" dès que le PDF ou lien de vérification est fourni -->
+                <span class="cert-note">Attestation à ajouter</span>
+            </div>
+
+            <div class="cert-card" data-reveal>
+                <span class="cert-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                </span>
+                <h3>Kaggle</h3>
+                <div class="cert-org">Kaggle</div>
+                <p>Formation suivie sur la plateforme Kaggle.</p>
+                <!-- TODO : préciser l'intitulé exact du cours + date, et ajouter le lien "Voir l'attestation" -->
+                <span class="cert-note">Intitulé exact, date et attestation à confirmer</span>
+            </div>
+
+            <div class="cert-card" data-reveal>
+                <span class="cert-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                </span>
+                <h3>Network Basics</h3>
+                <div class="cert-org">Organisme à confirmer</div>
+                <p>Formation sur les fondamentaux des réseaux informatiques.</p>
+                <!-- TODO : confirmer l'organisme émetteur, la date, et ajouter le lien "Voir l'attestation" -->
+                <span class="cert-note">Organisme, date et attestation à confirmer</span>
             </div>
 
             <div class="cert-card cert-card--placeholder" data-reveal>
@@ -390,11 +450,48 @@
     </div>
 </section>
 
-<!-- ================= PROJETS ================= -->
-<section id="projets" class="section" aria-labelledby="projets-title">
+<!-- ================= HACKATHONS & ÉVÉNEMENTS ================= -->
+<section id="hackathons" class="section" aria-labelledby="hackathons-title">
     <div class="section-inner">
         <div class="section-header" data-reveal>
-            <span class="section-tag">05 · Réalisations</span>
+            <span class="section-tag">05 · Événements</span>
+            <h2 id="hackathons-title">Hackathons &amp; événements</h2>
+            <p>Ma participation à des événements techniques, en dehors de mon cursus académique.</p>
+        </div>
+
+        <!-- Pour ajouter un événement : dupliquez un bloc .hackathon-card.
+             TODO : compléter date, lieu, thématique et éventuelle preuve de
+             participation pour chacun de ces événements. -->
+        <div class="hackathon-grid">
+            <div class="hackathon-card" data-reveal>
+                <span class="hackathon-badge">Participation</span>
+                <h3>CYTAC</h3>
+                <p>Participation à l'événement CYTAC.</p>
+                <span class="cert-note">Date et détails à préciser</span>
+            </div>
+
+            <div class="hackathon-card" data-reveal>
+                <span class="hackathon-badge">Participation</span>
+                <h3>EPITNET</h3>
+                <p>Participation à l'événement EPITNET.</p>
+                <span class="cert-note">Date et détails à préciser</span>
+            </div>
+
+            <div class="hackathon-card" data-reveal>
+                <span class="hackathon-badge">Participation</span>
+                <h3>HackerLab</h3>
+                <p>Participation à l'événement HackerLab.</p>
+                <span class="cert-note">Date et détails à préciser</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PROJETS ================= -->
+<section id="projets" class="section section--alt" aria-labelledby="projets-title">
+    <div class="section-inner">
+        <div class="section-header" data-reveal>
+            <span class="section-tag">06 · Réalisations</span>
             <h2 id="projets-title">Mes projets</h2>
             <p>Des projets concrets à travers lesquels je mets en pratique mes compétences.</p>
         </div>
@@ -422,6 +519,26 @@
                     </div>
                     <div class="project-links">
                         <!-- TODO : remplacer par le vrai lien GitHub / démo de Benin Orientation -->
+                        <span class="badge-soon">Liens GitHub / démo à venir</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="web" data-reveal>
+                <div class="project-media"><span class="project-monogram">WA</span></div>
+                <div class="project-body">
+                    <span class="project-status">Projet en équipe</span>
+                    <h3>Waaloge</h3>
+                    <p>Application de logement étudiant, développée en équipe avec une organisation Git structurée (dépôt partagé, branches), associant frontend, backend et API.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">API REST</span>
+                        <span class="tech-tag">PostgreSQL / Neon</span>
+                        <span class="tech-tag">Git / GitHub</span>
+                    </div>
+                    <div class="project-links">
+                        <!-- TODO : remplacer par le vrai lien GitHub / démo de Waaloge -->
                         <span class="badge-soon">Liens GitHub / démo à venir</span>
                     </div>
                 </div>
@@ -485,10 +602,10 @@
 </section>
 
 <!-- ================= PROJETS À VENIR ================= -->
-<section class="section section--alt" aria-labelledby="upcoming-title">
+<section class="section" aria-labelledby="upcoming-title">
     <div class="section-inner">
         <div class="section-header" data-reveal>
-            <span class="section-tag">06 · Roadmap</span>
+            <span class="section-tag">07 · Roadmap</span>
             <h2 id="upcoming-title">Ce que je construis ensuite</h2>
             <p>Mon portfolio évolue avec mes apprentissages. Voici les pistes sur lesquelles je travaille.</p>
         </div>
@@ -529,15 +646,16 @@
 </section>
 
 <!-- ================= PARCOURS ================= -->
-<section id="parcours" class="section" aria-labelledby="parcours-title">
+<section id="parcours" class="section section--alt" aria-labelledby="parcours-title">
     <div class="section-inner">
         <div class="section-header" data-reveal>
-            <span class="section-tag">07 · Chronologie</span>
+            <span class="section-tag">08 · Chronologie</span>
             <h2 id="parcours-title">Mon parcours</h2>
-            <p>Formation, stages et certifications qui construisent progressivement mon profil.</p>
+            <p>Formation, expériences, certifications et événements qui construisent progressivement mon profil.</p>
         </div>
 
         <div class="timeline">
+            <p class="timeline-group-label" data-reveal>Formation</p>
             <div class="timeline-item" data-reveal>
                 <span class="timeline-dot"></span>
                 <div class="timeline-content">
@@ -548,6 +666,7 @@
                 </div>
             </div>
 
+            <p class="timeline-group-label" data-reveal>Expériences</p>
             <div class="timeline-item" data-reveal>
                 <span class="timeline-dot"></span>
                 <div class="timeline-content">
@@ -557,7 +676,6 @@
                     <p>Première immersion en environnement informatique professionnel : réseaux, salle serveur et développement web.</p>
                 </div>
             </div>
-
             <div class="timeline-item" data-reveal>
                 <span class="timeline-dot"></span>
                 <div class="timeline-content">
@@ -567,7 +685,17 @@
                     <p>Poursuite de ma découverte du milieu professionnel informatique.</p>
                 </div>
             </div>
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-badge">Expérience</span>
+                    <h3>SUBLIME WORLD</h3>
+                    <div class="timeline-org">Expérience informatique</div>
+                    <p>Expérience professionnelle dans le domaine informatique.</p>
+                </div>
+            </div>
 
+            <p class="timeline-group-label" data-reveal>Certifications</p>
             <div class="timeline-item" data-reveal>
                 <span class="timeline-dot"></span>
                 <div class="timeline-content">
@@ -577,15 +705,59 @@
                     <p>Anglais technique appliqué à l'informatique et aux télécommunications.</p>
                 </div>
             </div>
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-badge">Certification</span>
+                    <h3>Kaggle</h3>
+                    <div class="timeline-org">Kaggle</div>
+                    <p>Formation suivie sur la plateforme Kaggle.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-badge">Certification</span>
+                    <h3>Network Basics</h3>
+                    <div class="timeline-org">Organisme à confirmer</div>
+                    <p>Formation sur les fondamentaux des réseaux informatiques.</p>
+                </div>
+            </div>
+
+            <p class="timeline-group-label" data-reveal>Hackathons &amp; événements</p>
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-badge">Participation</span>
+                    <h3>CYTAC</h3>
+                    <p>Participation à l'événement CYTAC.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-badge">Participation</span>
+                    <h3>EPITNET</h3>
+                    <p>Participation à l'événement EPITNET.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-badge">Participation</span>
+                    <h3>HackerLab</h3>
+                    <p>Participation à l'événement HackerLab.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="section section--alt" aria-labelledby="contact-title">
+<section id="contact" class="section" aria-labelledby="contact-title">
     <div class="section-inner">
         <div class="section-header" data-reveal>
-            <span class="section-tag">08 · Discutons</span>
+            <span class="section-tag">09 · Discutons</span>
             <h2 id="contact-title">Contact</h2>
             <p>Une question, un stage, un projet à construire ensemble ? N'hésitez pas à me contacter.</p>
         </div>

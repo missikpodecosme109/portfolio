@@ -38,6 +38,7 @@ function wireCentralLinks() {
     document.querySelectorAll('[data-link="email"]').forEach(el => el.href = `mailto:${portfolioData.email}`);
     document.querySelectorAll('[data-link="email-text"]').forEach(el => el.textContent = portfolioData.email);
     document.querySelectorAll('[data-link="cv"]').forEach(el => el.href = portfolioData.cv);
+    document.querySelectorAll('[data-link="cv-view"]').forEach(el => el.href = portfolioData.cv);
 }
 
 /* ---------- Header : fond + ombre au scroll ---------- */
