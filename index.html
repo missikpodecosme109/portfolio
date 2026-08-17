@@ -3,272 +3,696 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MISSIKPODE Mahugnon Cosme | Portfolio</title>
+
+    <!-- SEO -->
+    <title>MISSIKPODE Mahugnon Cosme | Informatique, Réseaux & Cybersécurité</title>
+    <meta name="description" content="Portfolio de MISSIKPODE Mahugnon Cosme, étudiant en Informatique & Télécommunications (INSTI-Lokossa), en construction progressive de son expertise en réseaux, cybersécurité et développement web.">
+    <meta name="author" content="MISSIKPODE Mahugnon Cosme">
+    <meta name="robots" content="index, follow">
+    <!-- Remplace par ton URL Vercel définitive une fois le déploiement confirmé -->
+    <!-- <link rel="canonical" href="https://TON-DOMAINE.vercel.app/"> -->
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MISSIKPODE Mahugnon Cosme | Informatique, Réseaux & Cybersécurité">
+    <meta property="og:description" content="Étudiant en Informatique & Télécommunications, je construis progressivement mon expertise en réseaux, cybersécurité et développement web.">
+    <meta property="og:image" content="assets/photo.jpeg">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="MISSIKPODE Mahugnon Cosme | Informatique, Réseaux & Cybersécurité">
+    <meta name="twitter:description" content="Étudiant en Informatique & Télécommunications — Réseaux, Cybersécurité, Développement Web.">
+    <meta name="twitter:image" content="assets/photo.jpeg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Police -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
+    <!-- Active les animations d'apparition uniquement si le JS s'exécute réellement -->
+    <script>document.documentElement.classList.add('js');</script>
 
+    <!-- Données structurées -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "MISSIKPODE Mahugnon Cosme",
+        "jobTitle": "Étudiant en Informatique et Télécommunications",
+        "description": "Étudiant en Informatique & Télécommunications construisant progressivement son expertise en réseaux, cybersécurité et développement web.",
+        "email": "mailto:missikpodecosme@gmail.com",
+        "sameAs": [
+            "https://github.com/missikpodecosme109",
+            "https://bj.linkedin.com/in/mahugnon-cosme-missikpode-49b5ab392"
+        ],
+        "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "INSTI-Lokossa"
+        }
+    }
+    </script>
+</head>
 <body>
 
-<header>
-    <nav>
-        <h2 class="logo">Cosme.dev</h2>
+<a href="#accueil" class="skip-link">Aller au contenu principal</a>
 
-        <ul>
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+    <nav class="nav" aria-label="Navigation principale">
+        <a href="#accueil" class="logo"><strong>Cosme</strong><span class="dot">.dev</span></a>
+
+        <ul class="nav-links">
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#apropos">À propos</a></li>
             <li><a href="#competences">Compétences</a></li>
             <li><a href="#experiences">Expériences</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#projets">Projets</a></li>
+            <li><a href="#parcours">Parcours</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <div class="nav-actions">
+            <button type="button" class="icon-btn theme-toggle" aria-label="Basculer entre mode sombre et mode clair">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </button>
+
+            <button type="button" class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 </header>
 
+<!-- Le panneau mobile est en dehors de <header> : le backdrop-filter du header
+     crée un containing block pour les descendants position:fixed, ce qui
+     écraserait ce panneau dans la hauteur du header s'il restait imbriqué. -->
+<div class="mobile-nav">
+    <div class="mobile-nav-backdrop"></div>
+    <div class="mobile-nav-panel">
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#experiences">Expériences</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#projets">Projets</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
 
+<main>
+
+<!-- ================= HERO ================= -->
 <section id="accueil" class="hero">
+    <div class="hero-inner">
+        <div class="hero-content">
+            <span class="eyebrow"><span class="pulse"></span> Disponible pour stage &amp; projets</span>
 
-    <div class="hero-text">
+            <h1 class="hero-name">MISSIKPODE Mahugnon<br>Cosme</h1>
 
-        <h1>
-            Bonjour, je suis <span>MISSIKPODE Mahugnon Cosme</span>
-        </h1>
+            <p class="hero-role">Je m'intéresse à <span class="role-text">Réseaux informatiques</span><span class="role-cursor">|</span></p>
 
-        <h2>
-            Étudiant en Informatique & Télécommunications
-        </h2>
+            <p class="hero-lead">
+                Étudiant en Informatique &amp; Télécommunications, je construis progressivement mes compétences
+                en réseaux, cybersécurité et développement web. Curieux et orienté pratique, j'aime transformer
+                mes connaissances en projets concrets.
+            </p>
 
-        <p>
-            Passionné par les réseaux informatiques, la cybersécurité 
-            et le développement web. Je construis des solutions 
-            numériques modernes et sécurisées.
-        </p>
+            <div class="hero-actions">
+                <a href="#parcours" class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88"></polygon></svg>
+                    Découvrir mon parcours
+                </a>
+                <a href="#projets" class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 2,7 12,12 22,7 12,2"></polygon><polyline points="2,17 12,22 22,17"></polyline><polyline points="2,12 12,17 22,12"></polyline></svg>
+                    Voir mes projets
+                </a>
+                <a data-link="cv" download class="btn btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7,10 12,15 17,10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Télécharger mon CV
+                </a>
+            </div>
 
-        <div class="buttons">
+            <div class="hero-socials">
+                <a data-link="github" target="_blank" rel="noopener" class="icon-btn" aria-label="Profil GitHub">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <a data-link="linkedin" target="_blank" rel="noopener" class="icon-btn" aria-label="Profil LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a data-link="whatsapp" target="_blank" rel="noopener" class="icon-btn" aria-label="Contact WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                </a>
+                <a data-link="email" class="icon-btn" aria-label="Envoyer un email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </div>
+        </div>
 
-<a href="#projets">Voir mes projets</a>
-
-<a href="https://github.com/missikpodecosme109" target="_blank">
-GitHub
-</a>
-
-<a href="https://www.linkedin.com/in/mahugnon-cosme-missikpode-49b5ab392" target="_blank">
-LinkedIn
-</a>
-
-<a href="https://wa.me/2290163881159" target="_blank">
-WhatsApp
-</a>
-
-<a href="assets/CV_MISSIKPODE_COSME.pdf" download>
-Télécharger mon CV
-</a>
-
+        <div class="hero-visual">
+            <div class="hero-photo-frame">
+                <div class="hero-photo-glow" aria-hidden="true"></div>
+                <div class="hero-photo-ring">
+                    <img src="assets/photo.jpeg" alt="Portrait de MISSIKPODE Mahugnon Cosme" width="300" height="300">
+                </div>
+                <span class="hero-badge">🎓 GEI-IT · INSTI-Lokossa</span>
+            </div>
+        </div>
     </div>
 
+    <div class="scroll-cue" aria-hidden="true">
+        <span>Scroll</span>
+        <span class="scroll-line"></span>
     </div>
+</section>
 
+<!-- ================= À PROPOS ================= -->
+<section id="apropos" class="section" aria-labelledby="apropos-title">
+    <div class="section-inner">
+        <div class="section-header" data-reveal>
+            <span class="section-tag">01 · Qui suis-je</span>
+            <h2 id="apropos-title">À propos de moi</h2>
+        </div>
 
-    <div class="hero-image">
-        <img src="assets/photo.jpeg" alt="Photo de Cosme">
+        <div class="about-grid">
+            <div class="about-text" data-reveal>
+                <p>
+                    Je m'appelle MISSIKPODE Mahugnon Cosme, étudiant en Génie Électrique et Informatique,
+                    option Informatique et Télécommunications, à l'INSTI-Lokossa. J'ai découvert le monde
+                    de l'informatique à travers mes cours et mes premiers stages, et depuis, je cherche
+                    à comprendre en profondeur comment fonctionnent les réseaux, les systèmes et les
+                    infrastructures qui font tourner le numérique.
+                </p>
+                <p>
+                    J'apprends principalement par la pratique : monter et configurer des postes,
+                    manipuler des outils comme Linux et Kali Linux, écrire du code, et reproduire
+                    des scénarios concrets pour mieux comprendre la théorie vue en cours. Cette approche
+                    m'a permis de découvrir progressivement la cybersécurité, un domaine qui m'intéresse
+                    de plus en plus et que je continue d'explorer.
+                </p>
+                <p>
+                    Mon objectif est de poursuivre mes études en informatique, de me spécialiser
+                    davantage en cybersécurité et d'évoluer vers un profil d'ingénieur réseaux
+                    et cybersécurité, capable d'accompagner des organisations dans la sécurisation
+                    et l'administration de leurs systèmes.
+                </p>
+
+                <div class="chip-list">
+                    <span class="chip">Réseaux informatiques</span>
+                    <span class="chip">Cybersécurité</span>
+                    <span class="chip">Linux</span>
+                    <span class="chip">Développement web</span>
+                    <span class="chip">Administration système</span>
+                </div>
+            </div>
+
+            <div class="fact-panel" data-reveal>
+                <div class="fact-item">
+                    <div class="fact-label">Formation</div>
+                    <div class="fact-value">Génie Électrique et Informatique — Option Informatique et Télécommunications (GEI-IT)</div>
+                </div>
+                <div class="fact-item">
+                    <div class="fact-label">Établissement</div>
+                    <div class="fact-value">INSTI-Lokossa</div>
+                </div>
+                <div class="fact-item">
+                    <div class="fact-label">Orientation</div>
+                    <div class="fact-value">Réseaux · Cybersécurité · Développement web</div>
+                </div>
+                <div class="fact-item">
+                    <div class="fact-label">Objectif</div>
+                    <div class="fact-value">Devenir ingénieur réseaux &amp; cybersécurité</div>
+                </div>
+            </div>
+        </div>
     </div>
-
 </section>
 
+<!-- ================= COMPÉTENCES ================= -->
+<section id="competences" class="section section--alt" aria-labelledby="competences-title">
+    <div class="section-inner">
+        <div class="section-header" data-reveal>
+            <span class="section-tag">02 · Savoir-faire</span>
+            <h2 id="competences-title">Mes compétences</h2>
+            <p>Des compétences que je construis et affine à travers mes cours, mes stages et mes projets personnels.</p>
+        </div>
 
+        <div class="skills-grid">
+            <div class="skill-category" data-reveal>
+                <div class="skill-category-head">
+                    <span class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                    </span>
+                    <h3>Réseaux &amp; Systèmes</h3>
+                </div>
+                <p class="skill-note">Les fondamentaux que j'applique et approfondis en pratique.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">TCP/IP</span>
+                    <span class="skill-tag">Modèle OSI</span>
+                    <span class="skill-tag">Réseaux informatiques</span>
+                    <span class="skill-tag">Cisco</span>
+                    <span class="skill-tag">Administration réseau</span>
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">Kali Linux</span>
+                </div>
+            </div>
 
-<section id="apropos">
+            <div class="skill-category" data-reveal>
+                <div class="skill-category-head">
+                    <span class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16,18 22,12 16,6"></polyline><polyline points="8,6 2,12 8,18"></polyline></svg>
+                    </span>
+                    <h3>Développement Web</h3>
+                </div>
+                <p class="skill-note">Les technologies que j'utilise pour construire mes projets web.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">MySQL</span>
+                </div>
+            </div>
 
-    <h2>À propos de moi</h2>
+            <div class="skill-category" data-reveal>
+                <div class="skill-category-head">
+                    <span class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                    </span>
+                    <h3>Outils</h3>
+                </div>
+                <p class="skill-note">Mon environnement de travail au quotidien.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">XAMPP</span>
+                </div>
+            </div>
 
-    <p>
-        Je suis étudiant en Informatique et Télécommunications à INSTI-Lokossa.
-        Mon objectif est de devenir ingénieur spécialisé dans les réseaux,
-        la cybersécurité et les technologies numériques.
-
-        J'aime apprendre, réaliser des projets pratiques et développer
-        mes compétences dans les domaines de l'informatique.
-    </p>
-
+            <div class="skill-category skill-category--security" data-reveal>
+                <div class="skill-category-head">
+                    <span class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </span>
+                    <h3>Cybersécurité</h3>
+                </div>
+                <p class="skill-note">Un domaine en développement : je construis progressivement mes connaissances, notamment via Kali Linux et mes stages en environnement informatique professionnel.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Kali Linux</span>
+                    <span class="skill-tag">Sensibilisation sécurité réseau</span>
+                    <span class="skill-tag">Veille cybersécurité</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
+<!-- ================= EXPÉRIENCES ================= -->
+<section id="experiences" class="section" aria-labelledby="experiences-title">
+    <div class="section-inner">
+        <div class="section-header" data-reveal>
+            <span class="section-tag">03 · Terrain</span>
+            <h2 id="experiences-title">Expériences</h2>
+            <p>Mes premières immersions en environnement informatique professionnel.</p>
+        </div>
 
+        <div class="timeline">
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-badge">Stage informatique</span>
+                    <h3>Météo-Bénin</h3>
+                    <div class="timeline-org">Stage informatique</div>
+                    <ul>
+                        <li>Sertissage de câbles réseau</li>
+                        <li>Découverte de la salle serveur</li>
+                        <li>Montage et configuration de postes informatiques</li>
+                        <li>Initiation au développement web</li>
+                        <li>Découverte de la cybersécurité avec Kali Linux</li>
+                        <li>Découverte de l'environnement informatique professionnel</li>
+                    </ul>
+                </div>
+            </div>
 
-<section id="competences">
-
-<h2>Mes compétences</h2>
-
-
-<div class="cards">
-
-<div class="card">
-<h3>Réseaux & Systèmes</h3>
-<p>
-TCP/IP, Modèle OSI, Cisco, Administration réseau,
-Linux, Kali Linux
-</p>
-</div>
-
-
-<div class="card">
-<h3>Développement Web</h3>
-<p>
-HTML, CSS, JavaScript, PHP, MySQL
-</p>
-</div>
-
-
-<div class="card">
-<h3>Outils</h3>
-<p>
-Git, GitHub, VS Code, XAMPP
-</p>
-</div>
-
-</div>
-
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-badge">Stage informatique</span>
+                    <h3>TFG Sarl</h3>
+                    <div class="timeline-org">Stage informatique</div>
+                    <p>
+                        Participation aux activités techniques du service informatique,
+                        découverte de l'environnement professionnel et développement
+                        de mes compétences numériques au contact d'une équipe technique.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
+<!-- ================= CERTIFICATIONS ================= -->
+<section id="certifications" class="section section--alt" aria-labelledby="certifications-title">
+    <div class="section-inner">
+        <div class="section-header" data-reveal>
+            <span class="section-tag">04 · Validations</span>
+            <h2 id="certifications-title">Certifications &amp; formations</h2>
+            <p>Une section que j'alimente au fur et à mesure de mes certifications.</p>
+        </div>
 
+        <div class="cert-grid">
+            <div class="cert-card" data-reveal>
+                <span class="cert-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"></polyline></svg>
+                </span>
+                <h3>English for IT 1</h3>
+                <div class="cert-org">Cisco Networking Academy</div>
+                <p>Formation axée sur l'anglais technique appliqué à l'informatique et aux télécommunications.</p>
+            </div>
 
-<section id="experiences">
-
-<h2>Expériences</h2>
-
-
-<div class="experience">
-
-<h3>Météo-Bénin — Stage informatique</h3>
-
-<p>
-- Sertissage de câbles réseau<br>
-- Découverte de salle serveur<br>
-- Montage et configuration de postes informatiques<br>
-- Initiation au développement web<br>
-- Découverte de la cybersécurité avec Kali Linux
-</p>
-
-</div>
-
-
-
-<div class="experience">
-
-<h3>TFG Sarl — Stage informatique</h3>
-
-<p>
-Participation aux activités techniques informatiques,
-découverte de l'environnement professionnel
-et développement des compétences numériques.
-</p>
-
-</div>
-
-
+            <div class="cert-card cert-card--placeholder" data-reveal>
+                <span class="cert-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </span>
+                <h3>Prochaines certifications</h3>
+                <p>Cisco, réseaux, cybersécurité… à venir au fil de ma progression.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
+<!-- ================= PROJETS ================= -->
+<section id="projets" class="section" aria-labelledby="projets-title">
+    <div class="section-inner">
+        <div class="section-header" data-reveal>
+            <span class="section-tag">05 · Réalisations</span>
+            <h2 id="projets-title">Mes projets</h2>
+            <p>Des projets concrets à travers lesquels je mets en pratique mes compétences.</p>
+        </div>
 
+        <div class="project-filters" data-reveal>
+            <button type="button" class="filter-btn is-active" data-filter="all">Tous</button>
+            <button type="button" class="filter-btn" data-filter="web">Développement web</button>
+            <button type="button" class="filter-btn" data-filter="auto">Python &amp; automatisation</button>
+        </div>
 
-<section id="projets">
+        <!-- Pour ajouter un projet : dupliquez un bloc .project-card et modifiez son contenu -->
+        <div class="projects-grid">
+            <article class="project-card" data-category="web" data-reveal>
+                <div class="project-media"><span class="project-monogram">BO</span></div>
+                <div class="project-body">
+                    <span class="project-status">Déployé</span>
+                    <h3>Benin Orientation</h3>
+                    <p>Plateforme d'orientation permettant de centraliser des informations sur les établissements, les formations et l'orientation scolaire et universitaire. J'ai travaillé sur le frontend et le backend, et le projet a été déployé.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">API</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <!-- TODO : remplacer par le vrai lien GitHub / démo de Benin Orientation -->
+                        <span class="badge-soon">Liens GitHub / démo à venir</span>
+                    </div>
+                </div>
+            </article>
 
-<h2>Mes projets</h2>
+            <article class="project-card" data-category="web" data-reveal>
+                <div class="project-media"><span class="project-monogram">EAE</span></div>
+                <div class="project-body">
+                    <span class="project-status">Projet / hackathon</span>
+                    <h3>Ever After Events</h3>
+                    <p>Site vitrine événementiel conçu pour une agence spécialisée dans l'organisation de mariages, réalisé dans le cadre d'un projet.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <!-- TODO : remplacer par le vrai lien GitHub / démo de Ever After Events -->
+                        <span class="badge-soon">Liens GitHub / démo à venir</span>
+                    </div>
+                </div>
+            </article>
 
+            <article class="project-card" data-category="web" data-reveal>
+                <div class="project-media"><span class="project-monogram">MT</span></div>
+                <div class="project-body">
+                    <span class="project-status">Projet personnel</span>
+                    <h3>MSKTRADE</h3>
+                    <p>Plateforme communautaire autour de la formation et du partage d'analyses liées au trading.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">PHP</span>
+                    </div>
+                    <div class="project-links">
+                        <!-- TODO : remplacer par le vrai lien GitHub / démo de MSKTRADE -->
+                        <span class="badge-soon">Liens GitHub / démo à venir</span>
+                    </div>
+                </div>
+            </article>
 
-<div class="cards">
-
-
-<div class="card">
-<h3>Ever After Events</h3>
-
-<p>
-Création d'un site vitrine professionnel pour une agence
-spécialisée dans l'organisation de mariages.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>MSKTRADE</h3>
-
-<p>
-Projet de communauté et plateforme autour de la formation
-et du partage d'analyses trading.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Trading Bot MT5</h3>
-
-<p>
-Projet d'automatisation d'analyse avec Python et MetaTrader 5.
-</p>
-
-</div>
-
-
-</div>
-
-
+            <article class="project-card" data-category="auto" data-reveal>
+                <div class="project-media"><span class="project-monogram">TB</span></div>
+                <div class="project-body">
+                    <span class="project-status">Projet personnel</span>
+                    <h3>Trading Bot MT5</h3>
+                    <p>Projet personnel d'analyse et d'automatisation avec Python et MetaTrader 5, autour de la gestion du risque. Un projet d'apprentissage technique, à ne pas considérer comme un produit financier professionnel.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MetaTrader 5</span>
+                    </div>
+                    <div class="project-links">
+                        <!-- TODO : remplacer par le vrai lien GitHub du Trading Bot MT5 -->
+                        <span class="badge-soon">Lien GitHub à venir</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
 </section>
 
+<!-- ================= PROJETS À VENIR ================= -->
+<section class="section section--alt" aria-labelledby="upcoming-title">
+    <div class="section-inner">
+        <div class="section-header" data-reveal>
+            <span class="section-tag">06 · Roadmap</span>
+            <h2 id="upcoming-title">Ce que je construis ensuite</h2>
+            <p>Mon portfolio évolue avec mes apprentissages. Voici les pistes sur lesquelles je travaille.</p>
+        </div>
 
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>
-Vous pouvez me retrouver sur mes différentes plateformes :
-</p>
-
-
-<div class="contact-links">
-
-<a href="https://github.com/missikpodecosme109" target="_blank">
-💻 GitHub
-</a>
-
-
-<a href="https://www.linkedin.com/in/mahugnon-cosme-missikpode-49b5ab392" target="_blank">
-🔗 LinkedIn
-</a>
-
-
-<a href="https://wa.me/2290163881159" target="_blank">
-📱 WhatsApp
-</a>
-
-
-<a href="mailto:missikpodecosme@gmail.com">
-📧 Email
-</a>
-
-</div>
-
+        <div class="roadmap-grid">
+            <div class="roadmap-item" data-reveal>
+                <span class="roadmap-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                </span>
+                Des projets réseaux pour mettre en pratique l'administration et la configuration d'infrastructures.
+            </div>
+            <div class="roadmap-item" data-reveal>
+                <span class="roadmap-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </span>
+                Des projets de cybersécurité pour approfondir mes connaissances de manière pratique.
+            </div>
+            <div class="roadmap-item" data-reveal>
+                <span class="roadmap-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,17 10,11 4,5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                </span>
+                Des scripts et outils d'automatisation pour simplifier des tâches informatiques récurrentes.
+            </div>
+            <div class="roadmap-item" data-reveal>
+                <span class="roadmap-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16,18 22,12 16,6"></polyline><polyline points="8,6 2,12 8,18"></polyline></svg>
+                </span>
+                De nouvelles applications web pour continuer à renforcer mes compétences fullstack.
+            </div>
+            <div class="roadmap-item" data-reveal>
+                <span class="roadmap-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                </span>
+                Des outils utiles pour d'autres étudiants en informatique.
+            </div>
+        </div>
+    </div>
 </section>
 
+<!-- ================= PARCOURS ================= -->
+<section id="parcours" class="section" aria-labelledby="parcours-title">
+    <div class="section-inner">
+        <div class="section-header" data-reveal>
+            <span class="section-tag">07 · Chronologie</span>
+            <h2 id="parcours-title">Mon parcours</h2>
+            <p>Formation, stages et certifications qui construisent progressivement mon profil.</p>
+        </div>
 
+        <div class="timeline">
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-badge">Formation · en cours</span>
+                    <h3>INSTI-Lokossa</h3>
+                    <div class="timeline-org">Génie Électrique et Informatique — Option Informatique &amp; Télécommunications</div>
+                    <p>Formation en cours, au cœur de laquelle je construis mes bases en réseaux, systèmes et développement.</p>
+                </div>
+            </div>
 
-<footer>
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-badge">Stage</span>
+                    <h3>Météo-Bénin</h3>
+                    <div class="timeline-org">Stage informatique</div>
+                    <p>Première immersion en environnement informatique professionnel : réseaux, salle serveur et développement web.</p>
+                </div>
+            </div>
 
-<p>
-© 2026 MISSIKPODE Mahugnon Cosme - Portfolio
-</p>
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-badge">Stage</span>
+                    <h3>TFG Sarl</h3>
+                    <div class="timeline-org">Stage informatique</div>
+                    <p>Poursuite de ma découverte du milieu professionnel informatique.</p>
+                </div>
+            </div>
 
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-badge">Certification</span>
+                    <h3>English for IT 1</h3>
+                    <div class="timeline-org">Cisco Networking Academy</div>
+                    <p>Anglais technique appliqué à l'informatique et aux télécommunications.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section section--alt" aria-labelledby="contact-title">
+    <div class="section-inner">
+        <div class="section-header" data-reveal>
+            <span class="section-tag">08 · Discutons</span>
+            <h2 id="contact-title">Contact</h2>
+            <p>Une question, un stage, un projet à construire ensemble ? N'hésitez pas à me contacter.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-cards" data-reveal>
+                <a class="contact-card" data-link="github" target="_blank" rel="noopener">
+                    <span class="icon-btn" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </span>
+                    <span class="contact-card-text">
+                        <span class="contact-card-label">GitHub</span>
+                        <span class="contact-card-value">github.com/missikpodecosme109</span>
+                    </span>
+                    <svg class="contact-card-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12,5 19,12 12,19"></polyline></svg>
+                </a>
+
+                <a class="contact-card" data-link="linkedin" target="_blank" rel="noopener">
+                    <span class="icon-btn" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </span>
+                    <span class="contact-card-text">
+                        <span class="contact-card-label">LinkedIn</span>
+                        <span class="contact-card-value">Mahugnon Cosme Missikpode</span>
+                    </span>
+                    <svg class="contact-card-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12,5 19,12 12,19"></polyline></svg>
+                </a>
+
+                <a class="contact-card" data-link="whatsapp" target="_blank" rel="noopener">
+                    <span class="icon-btn" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    </span>
+                    <span class="contact-card-text">
+                        <span class="contact-card-label">WhatsApp</span>
+                        <span class="contact-card-value">+229 01 63 88 11 59</span>
+                    </span>
+                    <svg class="contact-card-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12,5 19,12 12,19"></polyline></svg>
+                </a>
+
+                <a class="contact-card" data-link="email">
+                    <span class="icon-btn" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </span>
+                    <span class="contact-card-text">
+                        <span class="contact-card-label">Email</span>
+                        <span class="contact-card-value" data-link="email-text">missikpodecosme@gmail.com</span>
+                    </span>
+                    <svg class="contact-card-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12,5 19,12 12,19"></polyline></svg>
+                </a>
+            </div>
+
+            <form class="contact-form" data-reveal>
+                <div class="form-group">
+                    <label for="contact-name">Nom</label>
+                    <input type="text" id="contact-name" name="name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="contact-subject">Sujet</label>
+                    <input type="text" id="contact-subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                <p class="form-note">Ce formulaire ouvre votre client email par défaut (aucun serveur connecté).</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div>
+            <div class="footer-name">MISSIKPODE Mahugnon Cosme</div>
+            <div class="footer-role">Étudiant en Informatique &amp; Télécommunications</div>
+        </div>
+
+        <div class="footer-socials">
+            <a data-link="github" target="_blank" rel="noopener" class="icon-btn" aria-label="Profil GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a data-link="linkedin" target="_blank" rel="noopener" class="icon-btn" aria-label="Profil LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a data-link="whatsapp" target="_blank" rel="noopener" class="icon-btn" aria-label="Contact WhatsApp">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </a>
+            <a data-link="email" class="icon-btn" aria-label="Envoyer un email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© <span id="footer-year">2026</span> MISSIKPODE Mahugnon Cosme</span>
+            <span>Conçu avec passion pour les technologies numériques.</span>
+        </div>
+    </div>
 </footer>
 
+<button type="button" class="back-to-top" aria-label="Retour en haut de page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5,12 12,5 19,12"></polyline></svg>
+</button>
 
 <script src="script.js"></script>
-
 </body>
 </html>
